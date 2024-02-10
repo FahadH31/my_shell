@@ -1,5 +1,6 @@
 // myshell.c
 // This file contains the main logic of your shell program.
+// By Fahad Hussain (100816265), Kevaun Harris (100822219), Ayush Patel (100823602), and Rajiv Lomada (100823689)
 #include "myshell.h"
 
 // Function to execute the entered command
