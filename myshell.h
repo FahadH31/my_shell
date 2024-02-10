@@ -1,5 +1,6 @@
 // myshell.h
 /* This is the header file where you include standard libraries and declare functions used across your shell program. */
+// By Fahad Hussain (100816265), Kevaun Harris (100822219), Ayush Patel (100823602), and Rajiv Lomada (100823689)
 
 #ifndef MYSHELL_H  // Prevents double inclusion of this header file
 #define MYSHELL_H
