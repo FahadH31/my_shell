@@ -1,5 +1,6 @@
 // utility.c
 // This file will have the implementation of the commands.
+// By Fahad Hussain (100816265), Kevaun Harris (100822219), Ayush Patel (100823602), and Rajiv Lomada (100823689)
 
 #include "myshell.h"
 #include <stdio.h>
@@ -46,24 +47,27 @@ void change_directory(char *path) {
     }
 } 
 
+// Function to clear the screen.
 void clearscn() {
 	// ANSI escape codes to clear screen (by printing new-line characters)
 	// and move the cursor.
 	printf("\033[2J\033[H");
 }
 
+// Function to list the contents of a directory.
 void list_dir_contents(char *path) {
     DIR *directory;
     struct dirent *file;
 
-    // Open the specified directory
+    // Open current directory.
     if(path==NULL){
     	directory = opendir(".");
     }
+    // Open specified directory.
     else{
-    	directory = opendir(path);
+	directory = opendir(path);
     }
-
+    
     if (directory == NULL) {
     	perror("Error opening directory");
     	return;
@@ -77,6 +81,7 @@ void list_dir_contents(char *path) {
     closedir(directory);
 }
 
+// Function to list environment variables.
 void list_environment_strings() {
     extern char **environ;
 
@@ -86,6 +91,7 @@ void list_environment_strings() {
     }
 }
 
+// Function to print to the console.
 void echo_shell(char *comment) {
 	if(comment==NULL){
 		printf("Please enter something to print to the screen\n");
@@ -95,11 +101,13 @@ void echo_shell(char *comment) {
 	}
 }
 
+// Function to display the manual.
 void display_help() {
     	// Display the manual using 'more' filter
-	system("more readme.txt");	
+	system("more readme");	
 }
 
+// Function to pause the shell.
 void pause_shell() {
 	printf("The shell is paused. Press Enter to continue...");
 
@@ -107,6 +115,7 @@ void pause_shell() {
     	getchar();
 }
 
+// Function to quit the shell.
 void quit_shell() {
 	exit(0);
 }
