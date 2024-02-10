@@ -84,12 +84,13 @@ int main() {
     char *wd; // Buffer for current working directory 
     char input[1024]; // Buffer for user input
     wd = (char *)malloc(100 * sizeof(char));
-    int count = 0; // To ensure SHELL env var is only set on execution
+    int count = 0; // To ensure SHELL environment variable is only set on execution
     
     // Main command loop
     while (1) {
         getcwd(wd, 100);
         printf("MyShell%s>> ", wd); // Prompt for input
+	// Set SHELL env variable    
         if (count < 1) {        
             count++;
             if (setenv("SHELL", strcat(wd, "/myshell"), 1) != 0) {
