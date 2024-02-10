@@ -1,4 +1,5 @@
 # Makefile
+# Fahad Hussain, Rajiv Lomada, Ayush Patel, Kevaun Harris. Operating Systems Lab 2.
 all: myshell
 
 myshell: myshell.c utility.c
