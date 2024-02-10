@@ -15,6 +15,9 @@ MyShell is a simple shell program for educational purposes, supporting basic com
 	-`help` to display the user manual.
 	-`pause` to pause operation of the shell.
 	-`quit` to quit the shell.
+- External commands. 
+- Standard keyboard input.
+- Batchfile input.
 
 
 ## Installation and Compilation
@@ -22,3 +25,6 @@ MyShell is a simple shell program for educational purposes, supporting basic com
 	make
 - To run MyShell, enter the following command in the terminal:
 	./myshell
+- To run MyShell with a batch file, enter the following command in the terminal:
+	./myshell <batchfile>
+Replace <batchfile> with the name of the batchfile.
